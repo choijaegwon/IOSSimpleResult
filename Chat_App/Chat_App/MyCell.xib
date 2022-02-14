@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MyCell" selectionStyle="default" indentationWidth="10" rowHeight="174" id="KGk-i7-Jjw" customClass="MyCell" customModule="Chat_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="174"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="174"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myBubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xxe-9L-hbN">
+                        <rect key="frame" x="344" y="10" width="93" height="154"/>
+                        <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2202.02.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ags-8l-nBh">
+                        <rect key="frame" x="285" y="152" width="54" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="755" verticalHuggingPriority="755" scrollEnabled="NO" text="aaa" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="udt-u6-70A">
+                        <rect key="frame" x="354" y="15" width="33" height="144"/>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="udt-u6-70A" firstAttribute="bottom" secondItem="Xxe-9L-hbN" secondAttribute="bottom" constant="-5" id="043-Ea-fmn"/>
+                    <constraint firstItem="ags-8l-nBh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="9lD-cc-SeJ"/>
+                    <constraint firstItem="udt-u6-70A" firstAttribute="top" secondItem="Xxe-9L-hbN" secondAttribute="top" constant="5" id="Ecp-jL-kN5"/>
+                    <constraint firstItem="udt-u6-70A" firstAttribute="trailing" secondItem="Xxe-9L-hbN" secondAttribute="trailing" constant="-50" id="OWz-Uz-q0D"/>
+                    <constraint firstAttribute="bottom" secondItem="Xxe-9L-hbN" secondAttribute="bottom" constant="10" id="On1-kX-7p2"/>
+                    <constraint firstItem="Xxe-9L-hbN" firstAttribute="bottom" secondItem="ags-8l-nBh" secondAttribute="bottom" id="PXb-tp-phq"/>
+                    <constraint firstItem="Xxe-9L-hbN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QUd-4b-q4s"/>
+                    <constraint firstItem="udt-u6-70A" firstAttribute="leading" secondItem="Xxe-9L-hbN" secondAttribute="leading" constant="10" id="Sz2-SU-B2P"/>
+                    <constraint firstItem="Xxe-9L-hbN" firstAttribute="leading" secondItem="ags-8l-nBh" secondAttribute="trailing" constant="5" id="X3V-8i-CIl"/>
+                    <constraint firstAttribute="trailing" secondItem="Xxe-9L-hbN" secondAttribute="trailing" constant="10" id="p8N-tX-JYn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myTextView" destination="udt-u6-70A" id="609-SV-YqX"/>
+            </connections>
+            <point key="canvasLocation" x="223.91304347826087" y="169.41964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="myBubble.png" width="66.5" height="52.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
