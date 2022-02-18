@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Floating_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherBG_Moon.png" translatesAutoresizingMaskIntoConstraints="NO" id="r0N-et-svA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-5l-9Qp">
+                                <rect key="frame" x="314" y="762" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Heh-SM-2Pm"/>
+                                    <constraint firstAttribute="height" constant="60" id="OlA-Hq-h8f"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background" image="add_icon_green.png"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="D7n-PP-Ypy" kind="show" identifier="showPopup" animates="NO" id="VS6-g9-EjX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r0N-et-svA" secondAttribute="trailing" id="AaH-PM-LAv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5EN-5l-9Qp" secondAttribute="bottom" constant="40" id="Lnt-gI-Yrc"/>
+                            <constraint firstItem="r0N-et-svA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wh2-yn-Q8l"/>
+                            <constraint firstItem="5EN-5l-9Qp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="etD-H8-X7t"/>
+                            <constraint firstAttribute="bottom" secondItem="r0N-et-svA" secondAttribute="bottom" id="kNo-aZ-DBw"/>
+                            <constraint firstItem="r0N-et-svA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sQi-7Y-KNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5EN-5l-9Qp" secondAttribute="trailing" constant="40" id="sXM-XY-hFt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="30" y="70"/>
+        </scene>
+        <!--Floating Button List View Controller-->
+        <scene sceneID="ZP3-6h-vHT">
+            <objects>
+                <viewController id="D7n-PP-Ypy" customClass="FloatingButtonListViewController" customModule="Floating_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kwB-Gy-1iF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-Bk-oEg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nQX-bN-L1Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-CE-Xr2">
+                                <rect key="frame" x="319" y="473" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MGG-2C-Ya8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wrJ-67-kRv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="food3.png"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWq-dm-SWB">
+                                <rect key="frame" x="319" y="633" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="KFA-y4-EW7"/>
+                                    <constraint firstAttribute="height" constant="50" id="fb4-ZA-2Sl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="food1.png"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1I-qX-VQA">
+                                <rect key="frame" x="319" y="553" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="2sV-hj-SBI"/>
+                                    <constraint firstAttribute="height" constant="50" id="K2U-dS-Zce"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="food2.png"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEg-ss-aVE">
+                                <rect key="frame" x="314" y="708" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Bnf-Wc-LQs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="QIa-x3-cVJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="add_icon_green.png"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dismissFloating:" destination="D7n-PP-Ypy" eventType="touchUpInside" id="xGu-tJ-Q7Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XYb-QL-5Rs"/>
+                        <constraints>
+                            <constraint firstItem="p5G-Bk-oEg" firstAttribute="top" secondItem="kwB-Gy-1iF" secondAttribute="top" id="5of-nQ-bOv"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerX" secondItem="3tl-CE-Xr2" secondAttribute="centerX" id="7gx-wC-EV3"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerX" secondItem="JWq-dm-SWB" secondAttribute="centerX" id="8cl-tZ-L2V"/>
+                            <constraint firstItem="XYb-QL-5Rs" firstAttribute="bottom" secondItem="HEg-ss-aVE" secondAttribute="bottom" constant="40" id="CQM-Rv-5HD"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerX" secondItem="O1I-qX-VQA" secondAttribute="centerX" id="ISr-L9-WsA"/>
+                            <constraint firstItem="p5G-Bk-oEg" firstAttribute="leading" secondItem="kwB-Gy-1iF" secondAttribute="leading" id="M7k-tM-hgb"/>
+                            <constraint firstAttribute="bottom" secondItem="p5G-Bk-oEg" secondAttribute="bottom" id="NpV-Mu-LlZ"/>
+                            <constraint firstAttribute="trailing" secondItem="p5G-Bk-oEg" secondAttribute="trailing" id="WDR-st-qlY"/>
+                            <constraint firstItem="XYb-QL-5Rs" firstAttribute="trailing" secondItem="HEg-ss-aVE" secondAttribute="trailing" constant="40" id="baD-Mf-OaI"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerY" secondItem="O1I-qX-VQA" secondAttribute="centerY" constant="160" id="ehG-Ud-giw"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XYb-QL-5Rs" secondAttribute="leading" symbolic="YES" id="k3j-2m-HMx"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerY" secondItem="3tl-CE-Xr2" secondAttribute="centerY" constant="240" id="tCx-WD-SVt"/>
+                            <constraint firstItem="HEg-ss-aVE" firstAttribute="centerY" secondItem="JWq-dm-SWB" secondAttribute="centerY" constant="80" id="xZY-WW-Ac9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GWA-G8-L2r"/>
+                    <connections>
+                        <outlet property="btn1CenterY" destination="xZY-WW-Ac9" id="cgM-UI-Db1"/>
+                        <outlet property="btn2CenterY" destination="ehG-Ud-giw" id="zeM-k2-0O8"/>
+                        <outlet property="btn3CenterY" destination="tCx-WD-SVt" id="pzj-6x-DxZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGa-yV-ceA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WeatherBG_Moon.png" width="180" height="320.16000366210938"/>
+        <image name="add_icon_green.png" width="385.60000610351562" height="384.79998779296875"/>
+        <image name="food1.png" width="256" height="256"/>
+        <image name="food2.png" width="256" height="256"/>
+        <image name="food3.png" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
